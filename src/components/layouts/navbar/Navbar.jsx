@@ -1,3 +1,5 @@
+import { CartWidget } from "../../common/cartWidget/CartWidget";
+
 export const Navbar = () => {
   return (
     <nav>
@@ -9,7 +11,7 @@ export const Navbar = () => {
         <li>Categoría 3</li>
         <li>Categoría 4</li>
       </ul>
-      <button>Icono de un carrito</button>
+      <CartWidget />
     </nav>
   );
 };
