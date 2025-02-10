@@ -1,7 +1,7 @@
 import { ProductCard } from "../../common/cartWidget/productCard/ProductCard";
 import "./ItemListContainer.css";
 
-export const ItemListContainer = () => {
+export const ItemListContainer = ({ greeting }) => {
   let nombreDeUsuario = "Pepe";
   const saludar = () => {
     console.log(nombreDeUsuario);
@@ -9,7 +9,7 @@ export const ItemListContainer = () => {
 
   return (
     <section>
-      <h2>¡Hola, {nombreDeUsuario}!</h2>
+      <h2>{greeting}</h2>
       {console.log("Hola")}
       <h2>Mis productos</h2>
       <ProductCard

@@ -1,0 +1,24 @@
+/* cartWidget.css */
+.cart-container {
+  position: relative; /* Asegura que el número se posicione respecto a este contenedor */
+  display: inline-block; /* Hace que el carrito y el número se comporten como una unidad */
+}
+
+.cart-icon {
+  font-size: 3rem;
+}
+
+.item-count {
+  position: absolute; /* Posicionamos el número dentro del contenedor */
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
