@@ -1,18 +1,16 @@
 import "./ProductCard.css";
 
-export const ProductCard = (props) => {
-  const { title, price, stock, description } = props;
-
+export const ProductCard = ({ item }) => {
   return (
-    <div className="containerCard">
-      <h3>{title}</h3>
-      <h3>{price}</h3>
-      <h3>{stock}</h3>
-      <h3>{description}</h3>
+    <div className="productCard">
+      <img src={item.imageUrl} alt={item.title} />
+      <h2 className="productTitle">{item.title}</h2>
+      <p className="productPrice">${item.price}</p>
     </div>
   );
 };
 
+/*
 <ProductCard
   title="Título 1"
   price="Precio 1"
@@ -31,3 +29,4 @@ export const ProductCard = (props) => {
   stock="Stock 3"
   description="Descripción 3"
 />;
+*/

@@ -1,5 +1,43 @@
-.containerCard {
-  border: 2px solid green;
-  margin-top: 8px;
-  padding: 8px;
+/* Estilos para la tarjeta */
+.productCard {
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen con bordes redondeados */
+.productCard img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Estilos al pasar el mouse */
+.productCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.productCard img:hover {
+  transform: scale(1.08);
+}
+
+/* Estilos para el título */
+.productTitle {
+  font-size: 1rem;
+  color: #333;
+  margin: 16px 0;
+  font-weight: lighter;
+}
+
+/* Estilos para el precio */
+.productPrice {
+  font-size: 1.2rem; /* Un poco más grande */
+  font-weight: bold; /* En negrita */
+  color: #222; /* Un tono más oscuro */
+  margin-top: 4px;
 }

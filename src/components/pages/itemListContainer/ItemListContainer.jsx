@@ -1,35 +1,51 @@
-import { ProductCard } from "../../common/cartWidget/productCard/ProductCard";
+import { useEffect, useState } from "react";
+import { products } from "../../../products";
 import "./ItemListContainer.css";
+import { ProductCard } from "../../common/cartWidget/productCard/ProductCard";
 
 export const ItemListContainer = ({ greeting }) => {
-  let nombreDeUsuario = "Pepe";
-  const saludar = () => {
-    console.log(nombreDeUsuario);
-  };
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const getProducts = new Promise((resolve, reject) => {
+      let isAdmin = true;
+      if (isAdmin) {
+        resolve(products);
+      } else {
+        reject({ message: "Todo salió mal", status: 400 });
+      }
+    });
+
+    getProducts
+      .then((res) => setItems(res))
+      .catch((error) => console.log(error));
+  }, []);
 
   return (
     <section>
       <h2>{greeting}</h2>
-      {console.log("Hola")}
       <h2>Mis productos</h2>
-      <ProductCard
-        title="Título 1"
-        price="Precio 1"
-        stock="Stock 1"
-        description="Descripción 1"
-      />
-      <ProductCard
-        title="Título 2"
-        price="Precio 2"
-        stock="Stock 2"
-        description="Descripción 2"
-      />
-      <ProductCard
-        title="Título 3"
-        price="Precio 3"
-        stock="Stock 3"
-        description="Descripción 3"
-      />
+      {items.map((item) => {
+        return <ProductCard key={item.id} item={item} />;
+      })}
     </section>
   );
 };
+
+/*
+  fetch() es una función que nos permite hacer peticiones HTTP a un servidor. Se usa cuando queremos obtener datos de una API, enviar información o interactuar con bases de datos en la web.
+
+  Cuando llamamos a fetch(), JavaScript no obtiene inmediatamente la respuesta. En su lugar, devuelve una Promesa, que es un objeto especial que representa un "valor futuro".
+
+  Una Promesa en JavaScript significa que el código no se ejecuta de inmediato, sino que espera la respuesta del servidor antes de continuar.
+
+  📌 El callback está dentro de new Promise().
+
+  Creamos una promesa (new Promise(...))
+
+  La promesa recibe una función callback con dos parámetros: resolve y reject.
+  Nunca se ejecutan ambas, una u otra.
+  Esta función es ejecutada automáticamente cuando se crea la promesa.
+
+  Dependiendo de si la promesa se resuelve o se rechaza, se ejecutará el método .then() o .catch().
+*/

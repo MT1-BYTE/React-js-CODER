@@ -1,0 +1,46 @@
+/* Estilos generales del navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  color: #222;
+}
+
+/* Estilos para el logo */
+.imgLogo {
+  height: 70px;
+  width: 70px;
+}
+
+/* Estilos para el título */
+.navbarTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #222;
+  text-align: center;
+}
+
+/* Estilos para la lista de navegación */
+.navbarMenu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilos para los elementos de la lista */
+li {
+  font-weight: bold;
+  cursor: pointer;
+  color: #222;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover para los elementos de la lista */
+li:hover {
+  color: #ff6600;
+}
