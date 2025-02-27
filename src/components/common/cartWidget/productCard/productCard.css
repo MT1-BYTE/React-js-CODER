@@ -36,8 +36,8 @@
 
 /* Estilos para el precio */
 .productPrice {
-  font-size: 1.2rem; /* Un poco más grande */
-  font-weight: bold; /* En negrita */
-  color: #222; /* Un tono más oscuro */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #222;
   margin-top: 4px;
 }

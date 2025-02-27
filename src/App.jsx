@@ -3,6 +3,8 @@ import { ItemListContainer } from "./components/pages/itemListContainer/ItemList
 import { Navbar } from "./components/layouts/navbar/Navbar";
 import Counter from "./components/common/cartWidget/counter/Counter";
 import { useState } from "react";
+//import Users from "./components/Users";
+import Comments from "./components/Comments";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,6 +17,8 @@ function App() {
 
   return (
     <div>
+      {/*<Users />*/}
+      {/*<Comments />*/}
       <button onClick={changeMode}>Cambiar modo</button>
       <Navbar />
       <ItemListContainer greeting="Hola, te damos la bienvenida!" />
