@@ -1,30 +1,30 @@
-import { Footer } from "./components/layouts/footer/Footer";
+//import { Footer } from "./components/layouts/footer/Footer";
+//import { Navbar } from "./components/layouts/navbar/Navbar";
+//import Counter from "./components/common/cartWidget/counter/Counter";
+
+import { BrowserRouter, Routes, Route } from "react-router";
 import { ItemListContainer } from "./components/pages/itemListContainer/ItemListContainer";
+import Cart from "./components/pages/cart/Cart";
 import { Navbar } from "./components/layouts/navbar/Navbar";
-import Counter from "./components/common/cartWidget/counter/Counter";
-import { useState } from "react";
-//import Users from "./components/Users";
-import Comments from "./components/Comments";
+import { Footer } from "./components/layouts/footer/Footer";
+import ItemDetail from "./components/pages/itemDetail/ItemDetail";
+import Checkout from "./components/pages/checkout/Checkout";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const changeMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  console.log(darkMode);
-
   return (
-    <div>
-      {/*<Users />*/}
-      {/*<Comments />*/}
-      <button onClick={changeMode}>Cambiar modo</button>
+    <BrowserRouter>
       <Navbar />
-      <ItemListContainer greeting="Hola, te damos la bienvenida!" />
-      <Counter darkMode={darkMode} />
+      <Routes>
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/category/:name" element={<ItemListContainer />} />
+        <Route path="/login" element={<h2>Formulario login</h2>} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/itemDetail/:id" element={<ItemDetail />} />
+        <Route path="*" element={<h2>Error 404 not found</h2>} />
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 

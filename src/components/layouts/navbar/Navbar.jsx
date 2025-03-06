@@ -1,20 +1,23 @@
 import { CartWidget } from "../../common/cartWidget/cartWidget/CartWidget";
 import "./navbar.css";
-import logo from "../../../assets/images/logo.jpg";
+import logo from "../../../assets/images/sportive.png";
+import { Link } from "react-router";
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
-      <img className="imgLogo" src={logo} alt="" />
+      <Link to={"/"}>
+        <img className="imgLogo" src={logo} alt="" />
+      </Link>
       <h1 className="navbarTitle">Mi tienda deportiva</h1>
       <ul className="navbarMenu">
-        <li>Home</li>
-        <li>Categoría 1</li>
-        <li>Categoría 2</li>
-        <li>Categoría 3</li>
-        <li>Categoría 4</li>
+        <Link to={"/category/calzado"}>Calzado</Link>
+        <Link to={"/category/indumentaria"}>Indumentaria</Link>
+        <Link to={"/category/accesorios"}>Accesorios</Link>
       </ul>
-      <CartWidget className="cartWidget" />
+      <Link to="/cart">
+        <CartWidget className="cartWidget" />
+      </Link>
     </nav>
   );
 };

@@ -2,15 +2,25 @@ import { useEffect, useState } from "react";
 import { products } from "../../../products";
 import "./ItemListContainer.css";
 import { ProductCard } from "../../common/cartWidget/productCard/ProductCard";
+import { useParams } from "react-router";
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
 
+  const { name } = useParams();
+
+  // Undefined ---> Home ---> Ver todos los productos
+  // String ---> Categoría ---> Filtrar los productos
+
   useEffect(() => {
+    let productosFiltrados = products.filter(
+      (elemento) => elemento.category === name
+    );
+
     const getProducts = new Promise((resolve, reject) => {
       let isAdmin = true;
       if (isAdmin) {
-        resolve(products);
+        resolve(name ? productosFiltrados : products);
       } else {
         reject({ message: "Todo salió mal", status: 400 });
       }
@@ -19,7 +29,7 @@ export const ItemListContainer = ({ greeting }) => {
     getProducts
       .then((res) => setItems(res))
       .catch((error) => console.log(error));
-  }, []);
+  }, [name]);
 
   return (
     <section>

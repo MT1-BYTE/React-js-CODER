@@ -1,11 +1,16 @@
 /* cartWidget.css */
+.cartWidget {
+  text-decoration: none;
+}
+
 .cart-container {
   position: relative; /* Asegura que el número se posicione respecto a este contenedor */
   display: inline-block; /* Hace que el carrito y el número se comporten como una unidad */
 }
 
 .cart-icon {
-  font-size: 3rem;
+  font-size: 2rem;
+  color: black;
 }
 
 .item-count {
@@ -15,8 +20,8 @@
   background-color: red;
   color: white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   display: flex;
   justify-content: center;
   align-items: center;

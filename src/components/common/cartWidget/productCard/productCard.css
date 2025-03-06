@@ -9,6 +9,10 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.productCard a {
+  text-decoration: none;
+}
+
 /* Imagen con bordes redondeados */
 .productCard img {
   width: 100%;
