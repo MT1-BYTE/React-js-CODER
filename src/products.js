@@ -1,17 +1,17 @@
 export const products = [
+  //{
+  //  id: "1",
+  //  title: "Zapatillas adidas Terrex Free Hiker 2.0 Hombre",
+  //  price: 275000,
+  //  stock: 23,
+  //  description:
+  //    "Zapatillas de senderismo diseñadas para ofrecer comodidad, resistencia y tracción en cualquier terreno. Incorporan una entresuela Boost, que proporciona una amortiguación reactiva y un retorno de energía excepcional en cada paso. Su parte superior está confeccionada con Primeknit, un material flexible y transpirable que se adapta al pie para un ajuste cómodo y seguro. La suela Continental™ Rubber garantiza un agarre superior en superficies húmedas y secas, mientras que su diseño ligero permite mayor libertad de movimiento sin sacrificar estabilidad. Ideales para largas caminatas, terrenos irregulares y aventuras al aire libre, las Terrex Free Hiker 2.0 combinan tecnología y estilo para que explores sin límites.",
+  //  category: "calzado",
+  //  imageUrl:
+  //    "https://res.cloudinary.com/dhhtkgfiw/image/upload/v1740532384/zapatillas-adidas_qh0jco.jpg",
+  //},
   {
-    id: "1",
-    title: "Zapatillas adidas Terrex Free Hiker 2.0 Hombre",
-    price: 275000,
-    stock: 23,
-    description:
-      "Zapatillas de senderismo diseñadas para ofrecer comodidad, resistencia y tracción en cualquier terreno. Incorporan una entresuela Boost, que proporciona una amortiguación reactiva y un retorno de energía excepcional en cada paso. Su parte superior está confeccionada con Primeknit, un material flexible y transpirable que se adapta al pie para un ajuste cómodo y seguro. La suela Continental™ Rubber garantiza un agarre superior en superficies húmedas y secas, mientras que su diseño ligero permite mayor libertad de movimiento sin sacrificar estabilidad. Ideales para largas caminatas, terrenos irregulares y aventuras al aire libre, las Terrex Free Hiker 2.0 combinan tecnología y estilo para que explores sin límites.",
-    category: "calzado",
-    imageUrl:
-      "https://res.cloudinary.com/dhhtkgfiw/image/upload/v1740532384/zapatillas-adidas_qh0jco.jpg",
-  },
-  {
-    id: "2",
+    //  id: "2",
     title: "Zapatillas Running Nike Zoomx Vaporfly 3 Hombre",
     price: 400000,
     stock: 32,
@@ -22,7 +22,7 @@ export const products = [
       "https://res.cloudinary.com/dhhtkgfiw/image/upload/v1740532289/zapatillas-nikezoomx_koeflx.jpg",
   },
   {
-    id: "3",
+    //  id: "3",
     title: "Buzo Running Nike Trail Magic Hour Hombre",
     price: 140000,
     stock: 7,
@@ -33,7 +33,7 @@ export const products = [
       "https://res.cloudinary.com/dhhtkgfiw/image/upload/v1740532177/buzo-nike_cche0x.jpg",
   },
   {
-    id: "4",
+    //  id: "4",
     title: "Mochila Puma Patch",
     price: 60000,
     stock: 19,

@@ -1,27 +1,35 @@
-import { useState, useEffect } from "react"; //Estamos importando el Hook useState desde React.
+import { useContext, useState } from "react"; //Estamos importando el Hook useState desde React.
+import { CartContext } from "../../../../context/CartContext";
 
-const Counter = ({ darkMode }) => {
-  const [contador, setContador] = useState(0); // Valor inicial del contador en 0
+const Counter = ({ item }) => {
+  const [contador, setContador] = useState(1); // Valor inicial del contador
+  const { addToCart } = useContext(CartContext);
 
   const sumar = () => {
-    setContador(contador + 1);
+    if (item.stock > contador) {
+      setContador(contador + 1);
+    } else {
+      alert("Sin stock");
+    }
   };
 
   const restar = () => {
-    setContador(contador - 1);
+    if (contador > 1) {
+      setContador(contador - 1);
+    }
   };
 
-  console.log("Petición fuera del useEffect()");
-
-  useEffect(() => {
-    console.log("Una petición a un servidor que está en Japón");
-  }, [darkMode]); // Se llama array de dependencia
+  const onAdd = () => {
+    let objeto = { ...item, quantity: contador };
+    addToCart(objeto);
+  };
 
   return (
     <div>
       <h2>{contador}</h2>
       <button onClick={sumar}>Sumar</button>
       <button onClick={restar}>Restar</button>
+      <button onClick={onAdd}>Agregar al carrito</button>
     </div>
   );
 };
