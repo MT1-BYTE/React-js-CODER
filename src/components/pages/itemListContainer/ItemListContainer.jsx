@@ -4,7 +4,7 @@ import { ProductCard } from "../../common/cartWidget/productCard/ProductCard";
 import { useParams } from "react-router";
 import { dataBase } from "../../../firebaseConfig";
 
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
@@ -12,16 +12,30 @@ export const ItemListContainer = ({ greeting }) => {
   const { name } = useParams();
 
   useEffect(() => {
-    let refCollection = collection(dataBase, "products");
-    const getProducts = getDocs(refCollection);
-    getProducts
-      .then((res) => {
-        const nuevoArray = res.docs.map((elemento) => {
-          return { id: elemento.id, ...elemento.data() };
-        });
-        setItems(nuevoArray);
-      })
-      .catch((error) => console.log(error));
+    if (name) {
+      let refCollection = collection(dataBase, "products");
+      let consulta = query(refCollection, where("category", "==", name));
+      const getProducts = getDocs(consulta);
+      getProducts
+        .then((res) => {
+          const nuevoArray = res.docs.map((elemento) => {
+            return { id: elemento.id, ...elemento.data() };
+          });
+          setItems(nuevoArray);
+        })
+        .catch((error) => console.log(error));
+    } else {
+      let refCollection = collection(dataBase, "products");
+      const getProducts = getDocs(refCollection);
+      getProducts
+        .then((res) => {
+          const nuevoArray = res.docs.map((elemento) => {
+            return { id: elemento.id, ...elemento.data() };
+          });
+          setItems(nuevoArray);
+        })
+        .catch((error) => console.log(error));
+    }
   }, [name]);
 
   //const cargar = () => {
