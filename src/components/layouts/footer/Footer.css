@@ -1,0 +1,74 @@
+/* Estilos generales del footer */
+.footer {
+  width: 100%;
+  margin-top: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Sección superior del footer */
+.footerTop {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2c2c2c; /* Fondo más oscuro */
+  padding: 40px 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Secciones del footer */
+.footerSection {
+  max-width: 300px;
+}
+
+/* Alineación de los títulos */
+.footerSection h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #f8f8f8;
+  min-height: 30px;
+}
+
+/* Espaciado y hover en los párrafos */
+.footerSection p {
+  color: rgb(196, 195, 195);
+  margin: 15px 0;
+  font-size: 1rem;
+  opacity: 0.8;
+  transition: color 0.3s ease-in-out;
+  cursor: pointer; /* Añadir cursor para indicar que es interactivo */
+}
+
+/* Efecto hover en el contenido (solo en los párrafos) */
+.footerSection p:hover {
+  color: white;
+}
+
+/* Estilos para las redes sociales */
+.socialLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footerSection a {
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.footerSection a:hover {
+  color: #f8f8f8;
+}
+
+/* Sección inferior del footer */
+.footerBottom {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 300;
+}

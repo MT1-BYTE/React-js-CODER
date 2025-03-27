@@ -9,7 +9,6 @@ export const Navbar = () => {
       <Link to={"/"}>
         <img className="imgLogo" src={logo} alt="" />
       </Link>
-      <h1 className="navbarTitle">Mi tienda deportiva</h1>
       <ul className="navbarMenu">
         <Link to={"/category/calzado"}>Calzado</Link>
         <Link to={"/category/indumentaria"}>Indumentaria</Link>

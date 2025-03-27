@@ -3,33 +3,14 @@ import { Link } from "react-router-dom";
 
 export const ProductCard = ({ item }) => {
   return (
-    <div className="productCard">
-      <Link to={`/itemDetail/${item.id}`}>
-        <img src={item.imageUrl} alt={item.title} />
-        <h2 className="productTitle">{item.title}</h2>
-      </Link>
-      <p className="productPrice">${item.price}</p>
+    <div className="productCardContainer">
+      <div className="productCard">
+        <Link to={`/itemDetail/${item.id}`}>
+          <img src={item.imageUrl} alt={item.title} />
+          <h2 className="productTitle">{item.title}</h2>
+        </Link>
+        <p className="productPrice">${item.price}</p>
+      </div>
     </div>
   );
 };
-
-/*
-<ProductCard
-  title="Título 1"
-  price="Precio 1"
-  stock="Stock 1"
-  description="Descripción 1"
-/>;
-<ProductCard
-  title="Título 2"
-  price="Precio 2"
-  stock="Stock 2"
-  description="Descripción 2"
-/>;
-<ProductCard
-  title="Título 3"
-  price="Precio 3"
-  stock="Stock 3"
-  description="Descripción 3"
-/>;
-*/

@@ -1,3 +1,9 @@
-.cardContainer {
-  border: 2px solid black;
+/* Contenedor de la lista de productos */
+.itemsListContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 24px;
+  width: 100%;
 }

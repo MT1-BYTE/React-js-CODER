@@ -1,0 +1,104 @@
+/* Contenedor principal */
+.itemDetailContainer {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Imagen a la izquierda */
+.imageContainer {
+  padding: 16px;
+  flex: 2;
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #ddd; /* Borde suave */
+  object-fit: cover;
+}
+
+/* Contenedor derecho */
+.infoContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: start;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Mensaje de retiro */
+.pickupMessage {
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #00b506;
+}
+
+/* Título */
+.productTitleDetail {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Precio */
+.productPriceDetail {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* Sección de promociones */
+.promoContainer {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+}
+
+.promoText {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.promoIcons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.promoIcons img {
+  width: 55px;
+  height: 35px;
+}
+
+/* Botón de agregar al carrito */
+.addToCartButton {
+  width: 100%;
+  padding: 12px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin-top: 16px;
+}
+
+.addToCartButton:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+}

@@ -3,44 +3,45 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
-  padding: 10px 20px;
-  color: #222;
-}
-
-/* Estilos para el logo */
-.imgLogo {
+  padding: 15px 35px;
   height: 125px;
-  width: 125px;
+  background-color: white; /* Fondo blanco */
+  border-radius: 16px; /* Borde redondeado */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
 }
 
-/* Estilos para el título */
-.navbarTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-  color: #222;
-  text-align: center;
+/* Estilo para el logo */
+.imgLogo {
+  width: 100px; /* Ajusta el tamaño de la imagen */
+  height: auto;
 }
 
-/* Estilos para la lista de navegación */
+/* Estilo del menú del navbar */
 .navbarMenu {
   display: flex;
-  list-style: none;
-  gap: 20px;
-  padding: 0;
-  margin: 0;
+  align-items: center;
+  gap: 20px; /* Espacio entre los enlaces */
 }
 
-/* Estilos para los elementos de la lista */
-li {
+/* Estilo para los enlaces del menú */
+.navbarMenu a {
+  color: black; /* Color del texto por defecto */
+  text-decoration: none;
+  font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
-  color: #222;
-  transition: color 0.3s ease-in-out;
+  transition: background-color 0.4s ease, color 0.4s ease; /* Transición suave */
+  padding: 10px;
+  border-radius: 12px; /* Borde redondeado en los enlaces */
 }
 
-/* Hover para los elementos de la lista */
-li:hover {
-  color: #ff6600;
+/* Hover de los enlaces del menú */
+.navbarMenu a:hover {
+  background-color: black; /* Fondo negro al pasar el mouse */
+  color: white; /* Texto blanco al pasar el mouse */
+}
+
+/* Estilo del carrito */
+.cartWidget {
+  width: 30px; /* Ajusta el tamaño del ícono del carrito */
+  height: auto;
 }

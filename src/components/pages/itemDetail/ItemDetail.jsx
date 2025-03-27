@@ -1,3 +1,4 @@
+import "./ItemDetail.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Counter from "../../common/cartWidget/counter/Counter";
@@ -21,11 +22,33 @@ const ItemDetail = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>{item.title}</h1>
-      <img src={item.imageUrl} alt="" />
-      <p>{item.description}</p>
-      <Counter item={item} />
+    <div className="itemDetailContainer">
+      {/* Imagen a la izquierda (2/3 del ancho) */}
+      <div className="imageContainer">
+        <img src={item.imageUrl} alt={item.title} className="productImage" />
+      </div>
+
+      {/* Contenido a la derecha (1/3 del ancho) */}
+      <div className="infoContainer">
+        <p className="pickupMessage">¡Retirá gratis ya!</p>
+        <h1 className="productTitleDetail">{item.title}</h1>
+        <p className="productPriceDetail">${item.price}</p>
+
+        {/* Sección de promociones */}
+        <div className="promoContainer">
+          <p className="promoText">Aprovechá nuestras promos bancarias</p>
+          <div className="promoIcons">
+            <img src="/src/assets/images/visa.png" alt="Visa" />
+            <img src="/src/assets/images/mastercard.png" alt="Mastercard" />
+            <img src="/src/assets/images/cabal.png" alt="Cabal" />
+            <img src="/src/assets/images/naranjax.png" alt="NaranjaX" />
+          </div>
+        </div>
+
+        {/* Contador y botón de agregar al carrito */}
+        <Counter item={item} />
+        <button className="addToCartButton">Agregar al carrito</button>
+      </div>
     </div>
   );
 };

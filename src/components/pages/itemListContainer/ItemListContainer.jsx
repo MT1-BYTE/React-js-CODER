@@ -1,3 +1,4 @@
+import "./ItemListContainer.css";
 import { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 import { ProductCard } from "../../common/cartWidget/productCard/ProductCard";
@@ -50,9 +51,11 @@ export const ItemListContainer = ({ greeting }) => {
       <h2>{greeting}</h2>
       {/* <button onClick={cargar}>Cargar productos</button> */}
       <h2>Mis productos</h2>
-      {items.map((item) => {
-        return <ProductCard key={item.id} item={item} />;
-      })}
+      <div className="itemsListContainer">
+        {items.map((item) => {
+          return <ProductCard key={item.id} item={item} />;
+        })}
+      </div>
     </section>
   );
 };
