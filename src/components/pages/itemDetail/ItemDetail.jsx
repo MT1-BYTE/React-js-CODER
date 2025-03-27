@@ -33,6 +33,7 @@ const ItemDetail = () => {
         <p className="pickupMessage">¡Retirá gratis ya!</p>
         <h1 className="productTitleDetail">{item.title}</h1>
         <p className="productPriceDetail">${item.price}</p>
+        <p className="productDescriptionDetail">{item.description}</p>
 
         {/* Sección de promociones */}
         <div className="promoContainer">
@@ -47,7 +48,6 @@ const ItemDetail = () => {
 
         {/* Contador y botón de agregar al carrito */}
         <Counter item={item} />
-        <button className="addToCartButton">Agregar al carrito</button>
       </div>
     </div>
   );

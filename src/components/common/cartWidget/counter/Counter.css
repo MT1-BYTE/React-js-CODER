@@ -1,0 +1,71 @@
+/* Contenedor principal */
+.counterContainer {
+  display: flex;
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 16px; /* Espacio entre los elementos */
+  margin: 20px 0;
+}
+
+/* Contenedor para los botones de Sumar y Restar y el Contador */
+.counterButtonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px; /* Espacio entre los botones */
+}
+
+/* Estilo de los botones (sumar y restar) */
+.counterButton {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.counterButton:hover {
+  background-color: #333;
+}
+
+/* Contador */
+.counterDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  padding: 0 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  width: 60px;
+  text-align: center;
+}
+
+/* Botón de agregar al carrito */
+.addToCartButton {
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+  margin-top: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover */
+.addToCartButton:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}

@@ -1,3 +1,4 @@
+import "./Counter.css";
 import { useContext, useState } from "react"; //Estamos importando el Hook useState desde React.
 import { CartContext } from "../../../../context/CartContext";
 
@@ -25,11 +26,27 @@ const Counter = ({ item }) => {
   };
 
   return (
-    <div>
-      <h2>{contador}</h2>
-      <button onClick={sumar}>Sumar</button>
-      <button onClick={restar}>Restar</button>
-      <button onClick={onAdd}>Agregar al carrito</button>
+    <div className="counterContainer">
+      {/* Contenedor para los botones de Sumar, Restar y el Contador */}
+      <div className="counterButtonsContainer">
+        {/* Botón de Restar */}
+        <button className="counterButton" onClick={restar}>
+          -
+        </button>
+
+        {/* Contador */}
+        <div className="counterDisplay">{contador}</div>
+
+        {/* Botón de Sumar */}
+        <button className="counterButton" onClick={sumar}>
+          +
+        </button>
+      </div>
+
+      {/* Botón Agregar al carrito */}
+      <button className="addToCartButton" onClick={onAdd}>
+        Agregar al carrito
+      </button>
     </div>
   );
 };
